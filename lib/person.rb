@@ -1,3 +1,4 @@
+
 #ruby app
 
 class UnknownAttributeError  < StandardError
@@ -19,10 +20,12 @@ def initialize(attribute_hash = nil)
 
     @hobbies = @hobbies.split(",")
 
-    if(attribute_hash[2]!= nil)
-      raise UnknownAttributeError.new("There is no attribute called attribute_hash[2]")
+    if(attribute_hash.length>2)
+	    raise UnknownAttributeError.new("There is no attribute called #{attribute_hash.keys[2]}")
     end
 
+  end
+  def self.friendslist(persons)
   end
 end
 
